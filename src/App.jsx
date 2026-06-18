@@ -11,6 +11,8 @@ export default function App() {
   const selectedDungeon =
     dungeons.find((dungeon) => dungeon.id === selectedDungeonId) || dungeons[0];
 
+  console.log(dungeons);
+
   return (
     <div className="app-shell">
       <Sidebar

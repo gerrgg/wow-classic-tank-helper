@@ -21,12 +21,7 @@ body {
   overflow: hidden;
   background: #0b0a08;
   color: #f4efe5;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family: "Caudex", Georgia, "Times New Roman", serif;
 }
 
 button,
@@ -72,7 +67,6 @@ button {
 .sidebar__top h1 {
   margin: 0;
   color: #f4d083;
-  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.35rem;
   line-height: 1.1;
   text-shadow: 1px 1px 1px #000;
@@ -171,7 +165,6 @@ button {
 .map-header h2 {
   margin: 0;
   color: #f4d083;
-  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.35rem;
   line-height: 1.15;
   text-shadow: 1px 1px 1px #000;
@@ -275,7 +268,6 @@ button {
   display: grid;
   place-items: center;
   color: #17110b;
-  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.35rem;
   font-weight: 900;
   line-height: 1;
@@ -337,7 +329,6 @@ button {
   width: 232px;
   padding: 12px 8px 8px;
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
   text-shadow: 1px 1px 1px #000;
   filter: drop-shadow(0 7px 8px rgba(0, 0, 0, 0.85));
 }
@@ -388,9 +379,10 @@ button {
 }
 
 .wow-loot-frame__portrait img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 60px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 100%;
 }
 
 .wow-loot-frame__portrait span {
@@ -515,7 +507,6 @@ button {
     rgba(8, 9, 11, 0.96)
   );
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
   font-size: 0.92rem;
   line-height: 1.05;
   text-decoration: none;
@@ -733,4 +724,12 @@ button {
   white-space: nowrap;
   pointer-events: none;
   text-shadow: 1px 1px 1px #000;
+}
+
+.boss-marker__label {
+  opacity: 0;
+}
+
+.boss-marker:hover .boss-marker__label {
+  opacity: 1;
 }
