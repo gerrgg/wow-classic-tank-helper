@@ -11,7 +11,7 @@ export const shadowfangKeep = {
   shortName: "SFK",
   levelRange: "22–30",
   zone: "Silverpine Forest",
-  mapSrc: `${import.meta.env.BASE_URL}maps/shadowFang-keep.jpg`,
+  mapSrc: `${import.meta.env.BASE_URL}maps/shadowfang-keep.jpg`,
   width: 1024,
   height: 768,
 

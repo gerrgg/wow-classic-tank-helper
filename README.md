@@ -1,17 +1,124 @@
-# React + Vite
+# WoW Classic Tank Helper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React/Vite app for viewing WoW Classic dungeon maps, boss locations, and notable loot.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Interactive dungeon maps
+- Clickable boss markers
+- Boss notes and loot tables
+- Wowhead item links/tooltips
+- Dungeon data stored in reusable JavaScript files
+- Built with React, Vite, and Leaflet
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- React Leaflet
+- Leaflet
+- Wowhead tooltips
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# wow-classic-tank-helper
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```txt
+src/
+  components/
+    InteractiveMap.jsx
+    Sidebar.jsx
+    LootPopup.jsx
+
+  data/
+    dungeons/
+      deadmines.js
+      shadowfang-keep.js
+      index.js
+
+  App.jsx
+  main.jsx
+  styles.css
+
+public/
+  maps/
+```
+
+## Dungeon Data
+
+Each dungeon has its own data file inside:
+
+```txt
+src/data/dungeons/
+```
+
+Example:
+
+```js
+const deadmines = {
+  id: "deadmines",
+  zoneId: 1581,
+  name: "The Deadmines",
+  shortName: "DM",
+  levelRange: "17–26",
+  zone: "Westfall",
+  mapSrc: "/wow-classic-tank-helper/maps/deadmines.jpg",
+  width: 1024,
+  height: 772,
+  markers: [],
+};
+
+export default deadmines;
+```
+
+Boss marker coordinates are currently set manually.
+
+## GitHub Pages Deployment
+
+This project is configured for GitHub Pages at:
+
+```txt
+https://gerrgg.github.io/wow-classic-tank-helper/
+```
+
+For Vite, make sure `vite.config.js` includes:
+
+```js
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [react()],
+  base: "/wow-classic-tank-helper/",
+});
+```
+
+Then deploy the built `dist` folder using GitHub Actions or a `gh-pages` deployment workflow.
+
+## Notes
+
+This is a personal WoW Classic helper project and is not affiliated with Blizzard Entertainment or Wowhead.
