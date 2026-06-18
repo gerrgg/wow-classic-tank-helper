@@ -18,10 +18,9 @@ const blackfathomDeeps = {
   shortName: "BFD",
   levelRange: "24–32",
   zone: "Ashenvale",
-  mapSrc: "/wow-classic-tank-helper/maps/blackfathom-deeps.jpg",
+  mapSrc: `${import.meta.env.BASE_URL}maps/blackfathom-deeps.jpg`,
   width: 1024,
   height: 865,
-
   markers: [
     {
       id: "ghamoo-ra",

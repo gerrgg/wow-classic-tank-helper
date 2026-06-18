@@ -11,10 +11,9 @@ export const deadmines = {
   shortName: "DM",
   levelRange: "17–26",
   zone: "Westfall",
-  mapSrc: "/wow-classic-tank-helper/maps/deadmines.jpg",
+  mapSrc: `${import.meta.env.BASE_URL}maps/deadmines.jpg`,
   width: 1024,
   height: 772,
-
   markers: [
     {
       id: "rhahkzor",
@@ -200,7 +199,6 @@ export const deadmines = {
       npcId: 639,
       x: 784,
       y: 396,
-      portraitSrc: "/portraits/edwin-vancleef.jpg",
       wowheadUrl: createWowheadUrl("npc", 639, "edwin-vancleef"),
       notes:
         "Final boss of The Deadmines. Summons Defias Blackguards during the fight.",

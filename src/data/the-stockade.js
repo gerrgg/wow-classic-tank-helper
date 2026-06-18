@@ -9,10 +9,9 @@ export const theStockade = {
   shortName: "Stocks",
   levelRange: "24–30",
   zone: "Stormwind City",
-  mapSrc: "/wow-classic-tank-helper/maps/the-stockades.jpg",
+  mapSrc: `${import.meta.env.BASE_URL}maps/the-stockade.jpg`,
   width: 1024,
   height: 683,
-
   markers: [
     {
       id: "targorr-the-dread",
@@ -23,8 +22,7 @@ export const theStockade = {
       y: 0,
       wowheadUrl: createWowheadUrl("npc", 1696, "targorr-the-dread"),
       notes: "Quest boss surrounded by Defias mobs.",
-      loot: [
-      ],
+      loot: [],
     },
 
     {
@@ -36,8 +34,7 @@ export const theStockade = {
       y: 0,
       wowheadUrl: createWowheadUrl("npc", 1666, "kam-deepfury"),
       notes: "Shield-using boss inside The Stockade.",
-      loot: [
-      ],
+      loot: [],
     },
 
     {
@@ -49,8 +46,7 @@ export const theStockade = {
       y: 0,
       wowheadUrl: createWowheadUrl("npc", 1717, "hamhock"),
       notes: "Ogre boss with Bloodlust.",
-      loot: [
-      ],
+      loot: [],
     },
 
     {
@@ -62,8 +58,7 @@ export const theStockade = {
       y: 0,
       wowheadUrl: createWowheadUrl("npc", 1708, "bazil-thredd"),
       notes: "High-damage rogue boss and major quest target.",
-      loot: [
-      ],
+      loot: [],
     },
 
     {
@@ -75,8 +70,7 @@ export const theStockade = {
       y: 0,
       wowheadUrl: createWowheadUrl("npc", 1663, "dextren-ward"),
       notes: "Fear-based boss; clear nearby corridors before pulling.",
-      loot: [
-      ],
+      loot: [],
     },
 
     {
@@ -109,7 +103,6 @@ export const theStockade = {
         },
       ],
     },
-
   ],
 };
 
